@@ -202,6 +202,7 @@ RUN apt-get update \
 	--home /var/lib/asterisk --no-create-home \
 	--disabled-login --gecos "Asterisk PBX daemon" asterisk \
 	&& chown -R asterisk:dialout /var/*/asterisk \
+	# && chown -R asterisk:dialout /etc/asterisk \
 	&& chmod -R 750 /var/spool/asterisk
 
 EXPOSE 5060/udp 5061/udp 5062/udp
