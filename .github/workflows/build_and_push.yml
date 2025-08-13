@@ -44,6 +44,6 @@ jobs:
           context: .
           push: true
           platforms: linux/amd64,linux/arm64,linux/arm
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/asterisk-rpi:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/asterisk-quectel-rpi:latest
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
