@@ -1,7 +1,5 @@
 # Asterisk + chan_quectel
 
-[![Build and push](https://github.com/dec0dos/asterisk-quectel-docker/actions/workflows/build_and_push.yml/badge.svg)](https://github.com/dec0dos/asterisk-docker/actions/workflows/build_and_push.yml)
-
 This repository contains docker configuration and provides images for [Asterisk](https://www.asterisk.org/) with [chan_quectel](https://github.com/IchthysMaranatha/asterisk-chan-quectel).
 
 Docker repository: [sheepsticked/asterisk-quectel-rpi](https://hub.docker.com/r/sheepsticked/asterisk-quectel-rpi)
@@ -12,7 +10,7 @@ GitHub repository: [Sheepsticked/asterisk-quectel-docker](https://github.com/She
 
 ## Using images from hub.docker.com
 
-Dockerhub contains docker images with compiled binaries for the following platforms: amd64, arm64, armv7.
+Dockerhub contains docker images with compiled binaries for the following platforms: arm64.
 
 To start container run the following command:
 
