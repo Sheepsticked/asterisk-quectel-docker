@@ -5,7 +5,7 @@ ENV	ASTERISK_VERSION=16.20.0
 ENV	ASTERISK_VERSION_QUECTEL=16.20
 
 RUN set -x \
-    apt-get update \
+    && apt-get update \
 	&& apt-get install -y --no-install-recommends \
 		git autoconf automake ca-certificates \
 		build-essential pkg-config curl \
