@@ -44,8 +44,4 @@ services:
     volumes:
       - ./asterisk:/etc/asterisk
       - /dev:/dev
-    logging:
-      options:
-        max-size: "100m"
-        max-file: "5"
 ```
