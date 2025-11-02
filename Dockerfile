@@ -198,8 +198,8 @@ RUN set -x \
 	&& install -Dm0644 quectel.conf /etc/asterisk/quectel.conf \
 	&& make distclean \
 # Postinstall
-	&& addgroup --system --gid 1000 asterisk \
-	&& adduser --system --uid 1000 --ingroup asterisk --quiet \
+	&& addgroup --system --gid 1456 asterisk \
+	&& adduser --system --uid 1456 --ingroup asterisk --quiet \
 		--home /var/lib/asterisk --no-create-home \
 		--disabled-login --gecos "Asterisk PBX daemon" asterisk \
 	&& chown -R asterisk:dialout /var/*/asterisk \
@@ -216,8 +216,5 @@ WORKDIR /var/lib/asterisk/
 HEALTHCHECK --interval=10s --timeout=10s --retries=3 \
 	CMD /usr/sbin/asterisk -rx "core show sysinfo"
 
-COPY start.sh /start.sh
-RUN chmod +x /start.sh
-
-ENTRYPOINT ["/start.sh"]
+ENTRYPOINT ["/usr/sbin/asterisk", "-f", "-n", "-Uasterisk", "-Gdialout"]
 CMD ["-v"]
