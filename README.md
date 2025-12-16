@@ -35,8 +35,6 @@ sudo useradd -u 1456 -s /usr/sbin/nologin asterisk
 
 Add asterisk user to audio group. Create `/etc/udev/rules.d/99-asterisk-sound.rules` with contents like:
 
-Create `/etc/udev/rules.d/99-asterisk-sound.rules` with contents like:
-
 ```udev
 SUBSYSTEM=="sound", ACTION=="add", OWNER="asterisk", GROUP="audio", MODE="0660"
 ```
